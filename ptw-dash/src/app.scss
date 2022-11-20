@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap');
+
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+  background-color: rgb(26, 106, 122);
+}
+
+::selection {
+  background: rgb(223, 220, 89);
+}
+
+.app__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}

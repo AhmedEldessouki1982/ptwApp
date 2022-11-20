@@ -1,0 +1,18 @@
+.progressbars__container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .chart {
+        height: 8rem;
+        width: 8rem;
+        margin: 10px;
+        
+        .CircularProgressbar-text {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}

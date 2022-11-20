@@ -1,0 +1,40 @@
+
+.card__container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    min-width: 195px;
+    height: 5rem;
+    margin: 5px;
+    cursor: pointer;
+
+    .card__container__left {
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        color: aquamarine;
+        padding: 5px;
+        flex: 2;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .card__container__right {
+        display: flex;
+        padding: 5px;
+        align-items: flex-start;
+        flex: 4;
+        flex-direction: column;
+        font-family: 'Source Code Pro', monospace;
+        color: aquamarine;
+        font-weight:normal;
+
+        .card__container__right__value {
+            display: flex;
+            justify-self: flex-end;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Source Code Pro', monospace;
+        }
+    }
+}

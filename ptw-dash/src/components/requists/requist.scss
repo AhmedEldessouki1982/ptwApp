@@ -1,0 +1,88 @@
+.requist__container__area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    
+    .requist__container {
+    height: 22rem;
+    max-width: 75rem;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: rgb(213, 231, 231);
+    overflow: auto;
+    flex: 2;
+   
+    .table__row__container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 5px;
+        border-bottom: 5px solid rgb(26, 106, 122) ;
+    }
+
+    .ptw__data,
+    .ptw__kks {
+        display: flex;
+        text-transform: capitalize;
+        margin-bottom: 7px;
+        position: relative;
+        flex: 1;
+    }
+
+    .ptw__kks {
+        text-transform: uppercase;
+    }
+
+    .ptw__accept button {
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-right: 7px;
+    }
+
+    .ptw__reject button {
+        background-color: rgb(206, 47, 47);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-right: 7px;
+
+    }
+    .ptw__info {
+        background: rgb(95, 78, 240);
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        min-width: 20px;
+        min-height: 20px;
+        cursor: pointer;
+        color: yellow;
+        font-weight: bold;
+    }  
+}
+
+    .charts {
+        display: flex;
+        justify-content: flex-end;
+        min-height: 15rem;
+        min-width: 15rem;
+        background-color: rgb(213, 231, 231);
+        border-radius: 10px;
+        margin: 15px;
+
+        h3 {
+            display: block;
+           margin-left: 4rem;
+            
+        }
+    
+    }
+
+}
+   
+
+
+

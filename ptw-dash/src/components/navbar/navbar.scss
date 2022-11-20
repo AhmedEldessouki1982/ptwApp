@@ -1,0 +1,20 @@
+.navbar__container {
+    .SearchBar {
+        align-self: flex-start;
+    }
+    display: flex;
+    justify-content:flex-end;
+    height: 3rem;
+    margin: 15px;
+    border-radius: 10px;
+    align-items: flex-start;
+    background-color: rgb(213, 231, 231);
+
+    .navbar__container__icon {
+        color: rgb(49, 135, 233);
+        font-size: 27px;
+        display: flex;
+        margin: 8px;
+        cursor: pointer;
+    }
+}
