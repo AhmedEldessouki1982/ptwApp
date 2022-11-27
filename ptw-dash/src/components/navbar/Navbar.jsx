@@ -1,50 +1,52 @@
 import React from 'react';
-import './navbar.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome , faInfoCircle , faUserNinja, faBars , faFloppyDisk} from "@fortawesome/free-solid-svg-icons";
 import SearchBar from '../SearchBar/SearchBar';
-import {Box, TextField, useTheme} from '@mui/material';
-import { tokens } from '../theme/theme';
-import { height, padding } from '@mui/system';
-
+import {Box, IconButton, useTheme} from '@mui/material';
+import { ColorModeContext, tokens } from '../theme/theme';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 export default function Navbar () {
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode)
-    
+    const colors = tokens(theme.palette.mode);
+    let themeToggle = React.useContext(ColorModeContext);
     return (
         <>
-            <Box 
-            display={"flex"}
-            width = {"100hv"}
-            height = {"3rem"}
-            justifyContent = {"space-between"}
-            alignItems = {"center"}
+            <Box display={"flex"} width = {"100hv"} height = {"3rem"} justifyContent = {"space-between"} alignItems = {"center"}
             sx = {{
                 backgroundColor: colors.primary[500]
             }}>
-                <TextField
-                label = {"search ..."}
-                sx = {{
-                    height: "1rem",
-                    padding: "0",
-                }}
-                />
 
-                <Box 
-                display = {"flex"}
-                width = {"15rem"}
-                justifyContent = {"space-between"}
-                fontSize = {"25px"}
-                padding = {"10px"}
-                >
-                    <FontAwesomeIcon icon= { faFloppyDisk } className = "navbar__container__icon"/>
-                    <FontAwesomeIcon icon= { faHome } className = "navbar__container__icon"/>
-                    <FontAwesomeIcon icon= { faInfoCircle } className = "navbar__container__icon"/>
-                    <FontAwesomeIcon icon= { faUserNinja } className = "navbar__container__icon"/>
-                    <FontAwesomeIcon icon= { faBars } className = "navbar__container__icon"/>
+            {/* search box */}
+                <Box>
+                    
                 </Box>
+                
+            {/* icon box */}
+                <Box mr = "15px">
+                    <IconButton color = "warning" onClick={()=>{themeToggle.toggleColorMode()}}>
+                        {
+                            theme.palette.mode === "dark" ? (<DarkModeOutlinedIcon/>) : (<LightModeOutlinedIcon/>)
+                        }
+                    </IconButton>
+
+                    <IconButton color = "warning">
+                       <AccountCircleOutlinedIcon />
+                    </IconButton>
+
+                    <IconButton color = "warning">
+                       <NotificationsOutlinedIcon />
+                    </IconButton>
+
+                    <IconButton color = "warning">
+                       <SettingsOutlinedIcon />
+                    </IconButton>
+                </Box>
+
             </Box>
         </>
     )
 }
+
