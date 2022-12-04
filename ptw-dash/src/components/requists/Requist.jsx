@@ -2,7 +2,8 @@ import React from 'react';
 import '../requists/requist.scss';
 import {Ptw} from '../context/PtwContext';
 
-import {Box, useTheme} from '@mui/material';
+import {Box, Button, useTheme} from '@mui/material';
+import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import { tokens } from '../theme/theme';
 
 export default function Requist () {
@@ -11,11 +12,6 @@ export default function Requist () {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     
-    let statusThemes = {
-        valid: "green",
-        notValid: "red",
-    }
-
     return (
         <Box className = "requist__container__area" sx={{color:"black",  background: colors.primary[500]}}>
        
@@ -34,20 +30,20 @@ export default function Requist () {
                                 <Box className='ptw__accept'>
                                 {
                                     ptw.valid? 
-                                    <button style = {{background: statusThemes.valid}}>Valid</button>:
-                                    <button style = {{background: statusThemes.notValid}}>closed</button>
+                                    <Button sx={{background: colors.greenAccent[500]}}>valid</Button>:
+                                    <Button sx={{background: colors.redAccent[500]}}>closed</Button>
                                 }
                                 </Box>
                                 {<span className='ptw__reject'>
-                                    <button onClick={()=> {
+                                    <Button onClick={()=> {
                                         theUsedContext.dispatch({type:"PTW_CLOSE", ptwId: i})
-                                    }}>change</button>
+                                    }}>change</Button>
                                 </span>}
-                                <button className='ptw__info' onClick={
+                                <Button sx={{color: colors.primary[100]}} className='ptw__info' onClick={
                                     ()=> {
                                         theUsedContext.dispatch({type:"SHOW_POPUP" , ptwId: i})
                                     }
-                                }>i</button>
+                                }><MoreVertOutlinedIcon/></Button>
                             </Box>
                         )
                     )

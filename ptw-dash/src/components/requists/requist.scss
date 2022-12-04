@@ -51,34 +51,17 @@
 
     }
     .ptw__info {
-        background: rgb(95, 78, 240);
         outline: none;
         border: none;
         border-radius: 50%;
         min-width: 20px;
         min-height: 20px;
         cursor: pointer;
-        color: yellow;
         font-weight: bold;
     }  
 }
 
-    .charts {
-        display: flex;
-        justify-content: flex-end;
-        min-height: 15rem;
-        min-width: 15rem;
-        background-color: rgb(213, 231, 231);
-        border-radius: 10px;
-        margin: 15px;
-
-        h3 {
-            display: block;
-           margin-left: 4rem;
-            
-        }
-    
-    }
+   
 
 }
    

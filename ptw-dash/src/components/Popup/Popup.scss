@@ -12,7 +12,6 @@
 
     .popup__window {
         position: relative;
-        background-color: aqua;
         width: 1000px;
         height: 15rem;
         border-radius: 5px;
@@ -26,11 +25,11 @@
             text-transform: uppercase;
             font-weight: bolder;
             cursor: pointer;
-            background-color: rgb(209, 78, 78);
+            background-color: rgb(235, 32, 32);
             color: antiquewhite;
             outline: none;
             border: none;
-            border-radius: 1px;
+            border-radius: 5px;
         }
     }
 }
